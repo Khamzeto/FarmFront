@@ -102,7 +102,7 @@ export function HeaderMegaMenu() {
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           <div onClick={handleClick} style={{ cursor: 'pointer' }}>
-            Ешьте деревенское
+            2beram
           </div>
 
           <Group visibleFrom="sm">

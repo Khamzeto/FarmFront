@@ -66,7 +66,7 @@ export function FooterLinks() {
     <footer className={classes.footer}>
       <Container className={classes.inner}>
         <div className={classes.logo} onClick={handleClick} style={{ cursor: 'pointer' }}>
-          <div>Ешьте деревенское</div>
+          <div>2beram</div>
         </div>
       </Container>
       <Container className={classes.afterFooter}>
