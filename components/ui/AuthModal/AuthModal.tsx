@@ -17,7 +17,7 @@ export default function AuthModal({ opened, onClose, onSuccessfulAuth }) {
 
   // Функция отправки кода подтверждения
   const handleSendCode = async () => {
-    const response = await fetch('http://localhost:5001/api/auth/send-code', {
+    const response = await fetch('http://89.23.115.24:5001/api/auth/send-code', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -38,7 +38,7 @@ export default function AuthModal({ opened, onClose, onSuccessfulAuth }) {
 
   // Функция подтверждения кода
   const handleConfirmCode = async () => {
-    const response = await fetch('http://localhost:5001/api/auth/confirm-code', {
+    const response = await fetch('http://89.23.115.24:5001/api/auth/confirm-code', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, code: form.values.code }),

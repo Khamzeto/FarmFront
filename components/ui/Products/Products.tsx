@@ -72,11 +72,11 @@ export default function Products() {
     const query = category
       ? `category=${encodeURIComponent(category)}`
       : `subcategory=${encodeURIComponent(subcategory)}`;
-    const response = await fetch(`http://localhost:5001/api/products?${query}`);
+    const response = await fetch(`http://89.23.115.24:5001/api/products?${query}`);
     const data = await response.json();
     setProducts(data);
 
-    const categoriesResponse = await fetch('http://localhost:5001/api/categories');
+    const categoriesResponse = await fetch('http://89.23.115.24:5001/api/categories');
     const categoriesData = await categoriesResponse.json();
 
     const selected = categoriesData.find(

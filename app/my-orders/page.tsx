@@ -63,7 +63,7 @@ export default function UserOrdersPage() {
       }
 
       try {
-        const response = await fetch(`http://localhost:5001/api/orders/user/${userId}`);
+        const response = await fetch(`http://89.23.115.24:5001/api/orders/user/${userId}`);
         if (!response.ok) throw new Error('Ошибка при получении заказов');
 
         const data = await response.json();

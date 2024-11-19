@@ -77,7 +77,7 @@ export default function OrderManagementPage() {
       }
 
       try {
-        const response = await fetch(`http://localhost:5001/api/orders/seller/${userId}`);
+        const response = await fetch(`http://89.23.115.24:5001/api/orders/seller/${userId}`);
         const data = await response.json();
         setOrders(data);
       } catch (error) {
@@ -89,7 +89,7 @@ export default function OrderManagementPage() {
 
   const updateOrderStatus = async (orderId, status) => {
     try {
-      const response = await fetch(`http://localhost:5001/api/orders/${orderId}/status`, {
+      const response = await fetch(`http://89.23.115.24:5001/api/orders/${orderId}/status`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status }),

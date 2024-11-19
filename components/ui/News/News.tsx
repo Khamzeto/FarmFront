@@ -207,7 +207,7 @@ export function NewArrivalsCarousel() {
   useEffect(() => {
     async function fetchLatestProducts() {
       try {
-        const response = await fetch('http://localhost:5001/api/products/latest');
+        const response = await fetch('http://89.23.115.24:5001/api/products/latest');
         const data = await response.json();
         setProducts(Array.isArray(data) ? data : []);
       } catch (error) {

@@ -30,7 +30,7 @@ export default function ProductDetailPage() {
 
   const fetchProduct = async () => {
     setLoading(true);
-    const response = await fetch(`http://localhost:5001/api/products/${productId}`);
+    const response = await fetch(`http://89.23.115.24:5001/api/products/${productId}`);
     const data = await response.json();
     setProduct(data);
     setLoading(false);

@@ -53,7 +53,7 @@ export function SuppliersCarousel() {
   useEffect(() => {
     async function fetchSuppliers() {
       try {
-        const response = await fetch('http://localhost:5001/api/auth/sellers');
+        const response = await fetch('http://89.23.115.24:5001/api/auth/sellers');
         const data = await response.json();
         setSuppliers(
           data.map((seller) => ({

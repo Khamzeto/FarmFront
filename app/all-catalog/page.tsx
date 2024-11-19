@@ -23,7 +23,7 @@ export default function CatalogListPage() {
 
   // Fetch catalogs from the backend
   const fetchCatalogs = async () => {
-    const response = await fetch('http://localhost:5001/api/categories');
+    const response = await fetch('http://89.23.115.24:5001/api/categories');
     const data = await response.json();
     setCatalogs(data);
   };
@@ -34,7 +34,7 @@ export default function CatalogListPage() {
 
   // Function to delete a catalog
   const deleteCatalog = async (catalogId) => {
-    const response = await fetch(`http://localhost:5001/api/categories/${catalogId}`, {
+    const response = await fetch(`http://89.23.115.24:5001/api/categories/${catalogId}`, {
       method: 'DELETE',
     });
     if (response.ok) {

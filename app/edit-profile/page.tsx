@@ -34,7 +34,7 @@ export default function EditProfile() {
 
     async function fetchUserData() {
       try {
-        const response = await fetch(`http://localhost:5001/api/auth/user/${userId}`);
+        const response = await fetch(`http://89.23.115.24:5001/api/auth/user/${userId}`);
         const data = await response.json();
         setUser(data);
         form.setValues({
@@ -68,7 +68,7 @@ export default function EditProfile() {
   const handleSubmit = async (values) => {
     const userId = localStorage.getItem('user');
     try {
-      const response = await fetch(`http://localhost:5001/api/auth/${userId}`, {
+      const response = await fetch(`http://89.23.115.24:5001/api/auth/${userId}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(values),

@@ -51,7 +51,7 @@ export default function ViewUserProfile() {
 
     async function fetchUserData() {
       try {
-        const response = await fetch(`http://localhost:5001/api/auth/user/${userId}`);
+        const response = await fetch(`http://89.23.115.24:5001/api/auth/user/${userId}`);
         const data = await response.json();
         setUser(data);
       } catch (error) {
@@ -63,7 +63,7 @@ export default function ViewUserProfile() {
 
     async function fetchUserProducts() {
       try {
-        const response = await fetch(`http://localhost:5001/api/products/user/${userId}`);
+        const response = await fetch(`http://89.23.115.24:5001/api/products/user/${userId}`);
         const data = await response.json();
         setProducts(data);
       } catch (error) {

@@ -14,7 +14,7 @@ export default function CatalogPage() {
 
   // Fetch categories from the backend
   const fetchCategories = async () => {
-    const response = await fetch('http://localhost:5001/api/categories');
+    const response = await fetch('http://89.23.115.24:5001/api/categories');
     const data = await response.json();
     setCategories(data);
   };

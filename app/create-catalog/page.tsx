@@ -65,7 +65,7 @@ export default function CatalogPage() {
 
   // Save all categories with images to the backend
   const saveCategories = async () => {
-    const response = await fetch('http://localhost:5001/api/categories/bulk', {
+    const response = await fetch('http://89.23.115.24:5001/api/categories/bulk', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(categories),

@@ -205,7 +205,7 @@ export function ProductCarousel() {
   useEffect(() => {
     async function fetchTopDiscountedProducts() {
       try {
-        const response = await fetch('http://localhost:5001/api/products/top-discounted');
+        const response = await fetch('http://89.23.115.24:5001/api/products/top-discounted');
         const data = await response.json();
         setProducts(Array.isArray(data) ? data : []);
       } catch (error) {

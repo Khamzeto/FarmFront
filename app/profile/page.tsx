@@ -61,7 +61,7 @@ export default function UserProfile() {
 
     async function fetchUserData() {
       try {
-        const response = await fetch(`http://localhost:5001/api/auth/user/${userId}`);
+        const response = await fetch(`http://89.23.115.24:5001/api/auth/user/${userId}`);
         const data = await response.json();
         setUser(data);
       } catch (error) {
@@ -73,7 +73,7 @@ export default function UserProfile() {
 
     async function fetchUserProducts() {
       try {
-        const response = await fetch(`http://localhost:5001/api/products/user/${userId}`);
+        const response = await fetch(`http://89.23.115.24:5001/api/products/user/${userId}`);
         const data = await response.json();
         setProducts(data);
       } catch (error) {
@@ -88,7 +88,7 @@ export default function UserProfile() {
 
   const fetchCatalogs = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/categories');
+      const response = await fetch('http://89.23.115.24:5001/api/categories');
       const data = await response.json();
       setCatalogs(data);
     } catch (error) {
@@ -183,7 +183,7 @@ export default function UserProfile() {
 
   const handleUpdateProduct = async (values) => {
     try {
-      const response = await fetch(`http://localhost:5001/api/products/${currentProduct._id}`, {
+      const response = await fetch(`http://89.23.115.24:5001/api/products/${currentProduct._id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...values, userId: user._id }),
@@ -210,7 +210,7 @@ export default function UserProfile() {
     if (!confirmDelete) return;
 
     try {
-      const response = await fetch(`http://localhost:5001/api/products/${productId}`, {
+      const response = await fetch(`http://89.23.115.24:5001/api/products/${productId}`, {
         method: 'DELETE',
       });
       if (response.ok) {

@@ -46,7 +46,7 @@ export default function UserManagement() {
   const fetchUsers = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:5001/api/auth/users', {
+      const response = await fetch('http://89.23.115.24:5001/api/auth/users', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -72,7 +72,7 @@ export default function UserManagement() {
 
   const saveRoleChange = async (userId) => {
     try {
-      const response = await fetch('http://localhost:5001/api/auth/update-role', {
+      const response = await fetch('http://89.23.115.24:5001/api/auth/update-role', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -107,7 +107,7 @@ export default function UserManagement() {
 
   const deleteUser = async (userId) => {
     try {
-      const response = await fetch(`http://localhost:5001/api/auth/user/${userId}`, {
+      const response = await fetch(`http://89.23.115.24:5001/api/auth/user/${userId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,

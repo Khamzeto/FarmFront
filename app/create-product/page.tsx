@@ -49,7 +49,7 @@ export default function ProductForm() {
   // Fetch categories from the backend
   const fetchCatalogs = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/categories');
+      const response = await fetch('http://89.23.115.24:5001/api/categories');
       const data = await response.json();
       setCatalogs(data);
     } catch (error) {
@@ -97,7 +97,7 @@ export default function ProductForm() {
     }
 
     try {
-      const response = await fetch('http://localhost:5001/api/products', {
+      const response = await fetch('http://89.23.115.24:5001/api/products', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...form, userId }), // Добавляем userId в тело запроса
