@@ -8,7 +8,7 @@ export function ImageCarousel() {
     <Carousel mt="10" withIndicators slideSize="100%" loop>
       <Carousel.Slide>
         <Image
-          src="./2beram.jpeg"
+          src="https://i.imgur.com/Pf1uR5j.jpeg"
           alt="Slide 1"
           height={600}
         />
